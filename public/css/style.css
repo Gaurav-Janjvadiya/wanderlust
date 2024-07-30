@@ -1,0 +1,110 @@
+.navbar {
+    height: 5rem;
+    background-color: white;
+    margin-bottom: 1.6rem;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.748);
+    height: 5rem;
+    bottom: 0;
+    position: fixed;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-socials {
+    padding-left: 3rem;
+}
+
+.f-info-socials i {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.f-info-socials i:hover {
+    cursor: pointer;
+}
+
+.f-info-links {
+    padding-left: 3.54rem;
+}
+
+/* Cards */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body p {
+    padding: 0 !important;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: .2;
+    background-color: white;
+}
+
+.edit-form {
+    padding-bottom: 5.5rem;
+}
+
+/* show page*/
+.show-image {
+    height: 30vh;
+    object-fit: cover !important;
+}
+
+.btns {
+    display: flex;
+}
+
+.golden {
+    color: gold;
+}
+
+.hover-effect:hover {
+    color: #ff0000 !important;
+}

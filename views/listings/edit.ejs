@@ -1,0 +1,94 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+  <h3><a href="/listings/<%=listing._id%>">Back</a></h3>
+  <h1>Update listing</h1>
+  <form
+    class="edit-form needs-validation"
+    enctype="multipart/form-data"
+    novalidate
+    method="POST"
+    action="/listings/<%=listing._id%>?_method=PUT"
+  >
+    <div>
+      <label class="form-label" for="title">Title</label>
+      <input
+        required
+        type="text"
+        name="listing[title]"
+        placeholder="enter title"
+        value="<%= listing.title %>"
+        class="form-control"
+      />
+      <div class="invalid-feedback">Tittle looks empty!</div>
+    </div>
+    <br />
+    <div>
+      <label class="form-label" for="description">Description</label>
+      <textarea
+        required
+        type="text"
+        cols="21"
+        rows="4"
+        name="listing[description]"
+        placeholder="enter description"
+        class="form-control"
+      >
+<%= listing.description %></textarea
+      >
+      <div class="invalid-feedback">Discription looks empty!</div>
+    </div>
+    <br />
+    <div>
+      <label class="form-label" for="location">Price</label>
+      <input
+        required
+        name="listing[price]"
+        placeholder="enter price"
+        value="<%= listing.price%>"
+        class="form-control"
+      />
+      <div class="invalid-feedback">price looks empty!</div>
+    </div>
+    <br />
+    <p>Original Image</p>
+    <img
+      src="<%= originalImageUrl %>"
+      alt="<%= listing.image.filename %>"
+      class="img-fluid rounded shadow mb-4"
+      />
+    <br />
+    <div>
+      <label class="form-label" for="url">Upload Image</label>
+      <input type="file" name="listing[image]" class="form-control" />
+    </div>
+    <br />
+    <div>
+      <label class="form-label" for="location">Location</label>
+      <input
+        required
+        type="text"
+        name="listing[location]"
+        placeholder="enter location"
+        value="<%= listing.location %>"
+        class="form-control"
+      />
+      <div class="invalid-feedback">location looks empty!</div>
+    </div>
+    <br />
+    <div>
+      <label class="form-label" for="country">Country</label>
+      <input
+        required
+        type="text"
+        name="listing[country]"
+        class="form-control"
+        placeholder="enter country"
+        value="<%= listing.country %>"
+      />
+      <div class="invalid-feedback">Country looks empty!</div>
+    </div>
+    <br />
+    <button class="btn btn-dark">Submit</button>
+  </form>
+</body>
