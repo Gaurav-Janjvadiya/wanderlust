@@ -34,6 +34,15 @@ const listingSchema = new Schema({
   },
 });
 
+// Indexes
+listingSchema.index({ title: 1 }); // Index on title
+listingSchema.index({ price: 1 }); // Index on price
+listingSchema.index({ location: 1 }); // Index on location
+listingSchema.index({ country: 1 }); // Index on country
+
+// Compound index example
+listingSchema.index({ price: 1, location: 1 }); // Compound index on price and location
+
 listingSchema.post("findOneAndDelete", async (listing) => {
   if (listing) {
     const result = await Review.deleteMany({ _id: { $in: listing.reviews } });
